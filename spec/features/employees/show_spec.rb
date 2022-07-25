@@ -21,4 +21,19 @@ RSpec.describe 'employees show page' do
       expect(page).to have_content(@employee.name)
       expect(page).to have_content(@employee.level)
    end
+
+#unsure of how to test order for "list of all of their tickets from oldest to youngest"
+
+   it "can view oldest ticket assigned to the employee listed separately" 
+
+   it "can view form to add ticket to employee" do
+      expect(page).to_not have_content(@ticket_4.subject)
+
+      fill_in :subject, with: @ticket_4.subject
+      click_button 'Add Ticket'
+
+      expect(current_path).to eq(employee_path(@employee))
+      expect(page).to have_content(@ticket_4.subject)
+   end
+
 end

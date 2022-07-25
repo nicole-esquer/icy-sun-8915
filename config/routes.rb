@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   
   resources :departments, only: :index
   resources :employees, only: :show
+  resources :employee_tickets, only: :create
+
 end

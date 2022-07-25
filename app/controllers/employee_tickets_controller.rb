@@ -3,6 +3,7 @@ class EmployeeTicketsController < ApplicationController
       employee = Employee.find(params[:employee_id])
       ticket = Ticket.find_by(subject: params[:subject])
       employee_ticket = EmployeeTicket.new(employee_id: employee.id, ticket_id: ticket.id)
+      #i broke my add ticket button here
       if employee_ticket.save
          flash[:success] = "Ticket added"
          redirect_to employee_path(employee)

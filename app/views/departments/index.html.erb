@@ -2,9 +2,9 @@
 
 <% @departments.each do |department| %>
   <div id="departments-<%= department.id %>">
-    <%= department.name %> in <%= department.floor %><br>
+    <p><%= department.name %> is located on floor number: <%= department.floor %></p>
     Employees: <% department.employees.each do |employee| %>
-      <%= employee.name %><br>
+     <p> Name: <%= employee.name %> </p>
     <% end %>
   </div>
 <% end %><br>

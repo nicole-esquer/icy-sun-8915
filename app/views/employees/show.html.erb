@@ -10,6 +10,6 @@
 <p> Submit a new ticket: <%= form_with url: employee_tickets_path, method: :post, local: true do |f| %> </p>
   <%= f.label :subject %>
   <%= f.text_field :subject %>
-  <%= f.hidden_field :employee_id, value: @employee.id %>
+  <%= f.hidden_field :employee_id, value: @employee.id %> 
   <%= f.submit 'Add Ticket' %>
 <% end %>

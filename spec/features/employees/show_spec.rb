@@ -24,7 +24,7 @@ RSpec.describe 'employees show page' do
 
 #unsure of how to test order for "list of all of their tickets from oldest to youngest"
 
-   it "can view oldest ticket assigned to the employee listed separately" 
+   # it "can view oldest ticket assigned to the employee listed separately" 
 
    it "can view form to add ticket to employee" do
       expect(page).to_not have_content(@ticket_4.subject)

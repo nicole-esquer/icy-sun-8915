@@ -1,0 +1,8 @@
+<h1> Employee Show Page </h1>
+
+<p>Name: <%= @employee.name %></p>
+<p>Level: <%= @employee.level %></p>
+
+<p>Tickets: <% @employee.tickets.order_by_age.each do |ticket| %></p>
+  <%= ticket.subject %>
+<% end %>
